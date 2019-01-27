@@ -6,9 +6,7 @@ class AnotherTextEditingController extends TextEditingController {
     /// Check if the current text is composing
     /// If yes, then stop composing, if no then ignore this
     if (value.composing.start - value.composing.end != 0) {
-      value = value.copyWith(
-        composing: TextRange.empty,
-      );
+      clearComposing();
     }
 
     value = value.copyWith(
