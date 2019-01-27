@@ -1,14 +1,17 @@
-# another_text_editing_controller
+## What is this package?
 
-A new flutter plugin project.
+This is a package for working around a problem when composing text in language that use auto-completion like Japanese or Chinese and setting `TextEditingController.text` to something that has less text length than the current text. What this package does is that if the text is composing, it reset the composing before setting the new text.
 
-## Getting Started
+https://github.com/flutter/flutter/issues/27125
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.io/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## How to use?
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Just put it in `pubspec.yaml` like other package and import
+
+```
+import 'package:another_text_editing_controller/another_text_editing_controller.dart';
+```
+
+then replace any `TextEditingController` with `AnotherTextEditingController`.
+
+or you can just copy and paste the content of the `another_text_editing_controller.dart` and use it as your own class.
