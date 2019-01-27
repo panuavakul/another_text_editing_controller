@@ -28,6 +28,9 @@ class _MyHomePageState extends State<MyHomePage> {
   /// Use [AnotherTextEditingController] instead of [TextEditingController]
   final _controller = AnotherTextEditingController();
 
+  /// Use this and the app will crash
+  // final _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
